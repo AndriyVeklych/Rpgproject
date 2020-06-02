@@ -1,0 +1,288 @@
+object Form1: TForm1
+  AnchorSideBottom.Side = asrBottom
+  Left = 379
+  Height = 587
+  Top = 121
+  Width = 711
+  VertScrollBar.Visible = False
+  Anchors = []
+  AutoSize = True
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 711
+  Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object RichMemo1: TRichMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 5
+    Height = 291
+    Top = 5
+    Width = 563
+    BorderSpacing.Around = 5
+    HideSelection = False
+    Lines.Strings = (
+      'RichMemo1'
+    )
+    ParentFont = False
+    PopupMenu = PopupMenu1
+    ReadOnly = True
+    TabOrder = 0
+    ZoomFactor = 1
+  end
+  object GroupBox2: TGroupBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = RichMemo1
+    AnchorSideTop.Side = asrBottom
+    Left = 5
+    Height = 154
+    Top = 301
+    Width = 214
+    AutoSize = True
+    BorderSpacing.Around = 5
+    Caption = 'GroupBox2'
+    ClientHeight = 134
+    ClientWidth = 210
+    TabOrder = 1
+    object StringGrid3: TStringGrid
+      AnchorSideLeft.Control = GroupBox2
+      AnchorSideTop.Control = CheckBox1
+      AnchorSideTop.Side = asrBottom
+      Left = 5
+      Height = 100
+      Top = 29
+      Width = 200
+      BorderSpacing.Around = 5
+      TabOrder = 0
+      OnMouseUp = StringGrid3MouseUp
+    end
+    object CheckBox1: TCheckBox
+      AnchorSideTop.Control = GroupBox2
+      AnchorSideRight.Control = GroupBox2
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 19
+      Top = 5
+      Width = 71
+      Anchors = [akTop, akRight]
+      BorderSpacing.Around = 5
+      Caption = 'Весь стак'
+      TabOrder = 1
+    end
+  end
+  object GroupBox1: TGroupBox
+    AnchorSideLeft.Control = RichMemo1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 573
+    Height = 115
+    Top = 5
+    Width = 133
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = True
+    BorderSpacing.Around = 5
+    Caption = 'GroupBox1'
+    ClientHeight = 95
+    ClientWidth = 129
+    TabOrder = 2
+    object Button1: TButton
+      AnchorSideLeft.Control = GroupBox1
+      AnchorSideTop.Control = GroupBox1
+      Left = 5
+      Height = 25
+      Top = 5
+      Width = 68
+      AutoSize = True
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      Caption = 'Button1'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      AnchorSideLeft.Control = GroupBox1
+      AnchorSideTop.Control = Button1
+      AnchorSideTop.Side = asrBottom
+      Left = 5
+      Height = 25
+      Top = 35
+      Width = 68
+      AutoSize = True
+      BorderSpacing.Around = 5
+      Caption = 'Button2'
+      OnClick = Button2Click
+      TabOrder = 1
+    end
+    object Button3: TButton
+      AnchorSideLeft.Control = GroupBox1
+      AnchorSideTop.Control = Button2
+      AnchorSideTop.Side = asrBottom
+      Left = 5
+      Height = 25
+      Top = 65
+      Width = 68
+      AutoSize = True
+      BorderSpacing.Around = 5
+      Caption = 'Button3'
+      OnClick = Button3Click
+      TabOrder = 2
+    end
+  end
+  object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = RichMemo1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 5
+    Height = 261
+    Top = 301
+    Width = 419
+    Anchors = [akTop, akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 5
+    ClientHeight = 261
+    ClientWidth = 419
+    Font.Height = -21
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsItalic]
+    ParentFont = False
+    TabOrder = 3
+    object StringGrid1: TStringGrid
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
+      Left = 6
+      Height = 249
+      Hint = 'Локации'
+      Top = 6
+      Width = 242
+      BorderSpacing.Around = 5
+      ColCount = 1
+      DefaultDrawing = False
+      FixedColor = 14079702
+      FixedCols = 0
+      ParentBiDiMode = False
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+      TitleFont.Height = -21
+      TitleFont.Name = 'Comic Sans MS'
+      TitleFont.Style = [fsItalic]
+      OnMouseUp = StringGrid1MouseUp
+      ColWidths = (
+        71
+      )
+    end
+    object StringGrid2: TStringGrid
+      AnchorSideLeft.Control = StringGrid1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 253
+      Height = 144
+      Top = 6
+      Width = 160
+      BorderSpacing.Around = 5
+      ColCount = 1
+      DefaultDrawing = False
+      FixedColor = 14079702
+      FixedCols = 0
+      ParentBiDiMode = False
+      TabOrder = 1
+      TitleFont.Height = -21
+      TitleFont.Name = 'Comic Sans MS'
+      TitleFont.Style = [fsItalic]
+      OnMouseUp = StringGrid2MouseUp
+      ColWidths = (
+        71
+      )
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 224
+    top = 392
+    object MenuItem1: TMenuItem
+      Caption = 'Меню'
+      object MenuItem2: TMenuItem
+        Caption = 'Настройки'
+        OnClick = MenuItem2Click
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Выход без сохранения'
+        OnClick = MenuItem3Click
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Персонаж'
+      OnClick = MenuItem4Click
+      object MenuItem11: TMenuItem
+        Caption = 'Журнал Заданий'
+        OnClick = MenuItem11Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'О персонаже'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Инвентарь'
+        OnClick = MenuItem10Click
+      end
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Сброс персонажа'
+      OnClick = MenuItem6Click
+    end
+    object MenuItem7: TMenuItem
+      Caption = 'Отхилиться'
+      OnClick = MenuItem7Click
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'Test'
+      OnClick = MenuItem8Click
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    left = 184
+    top = 392
+    object MenuItem5: TMenuItem
+      Caption = 'Очистить текст'
+      OnClick = MenuItem5Click
+    end
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    left = 40
+    top = 56
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    left = 240
+    top = 56
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection1
+    left = 152
+    top = 56
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 304
+    top = 56
+  end
+  object Sqlite3Dataset1: TSqlite3Dataset
+    MasterSource = DataSource1
+    left = 299
+    top = 119
+  end
+end
